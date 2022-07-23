@@ -1,11 +1,10 @@
 import React from "react"
+import RandomAdviceBox from './components/RandomAdviceBox/RandomAdviceBox'
 
 function App() {
 	return (
-		<div>
-
-		</div>
-	);
+		<RandomAdviceBox />
+	)
 }
 
 export default App;
