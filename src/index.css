@@ -4,6 +4,7 @@
 	--grayish-blue: hsl(217, 19%, 38%);
 	--dark-grayish-blue: hsl(217, 19%, 24%);
 	--dark-blue: hsl(218, 23%, 16%);
+	font-size: 16px;
 }
 
 * {
@@ -14,4 +15,17 @@ body {
 	margin: 0;
 	background-color: var(--dark-blue);
 	font-family: Manrope, serif;
+}
+
+.sr-only {
+	position: absolute;
+	width: 1px;
+	height: 1px;
+	padding: 0;
+	margin: -1px;
+	white-space: nowrap;
+	overflow: hidden;
+	border: 0;
+	clip: rect(0 0 0 0);
+	clip-path: inset(50%);
 }

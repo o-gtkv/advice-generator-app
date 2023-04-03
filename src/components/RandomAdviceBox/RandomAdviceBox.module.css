@@ -1,17 +1,14 @@
-.adviceComponent {
+.adviceBox {
+    position: relative;
     text-align: center;
     background-color: var(--dark-grayish-blue);
-    padding: 30px;
+    padding: 30px 30px 55px;
     border-radius: 15px;
-    position: absolute;
-    transform: translate(-50%, -50%);
-    left: 50%;
-    top: 50%;
 }
 
 .advice {
     color: var(--light-cyan);
-    font-size: 28px;
+    font-size: 1.75rem;
     font-weight: 800;
 }
 
@@ -19,40 +16,39 @@
     color: var(--neon-green);
     letter-spacing: 3px;
     text-transform: uppercase;
+    font-size: 1rem;
 }
 
 .generateBtn {
     cursor: pointer;
-    position: relative;
-    bottom: -53px;
-    padding: 25px;
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translate(-50%, 50%);
     background-color: var(--neon-green);
     width: 40px;
     height: 40px;
+    border: none;
     border-radius: 50%;
-    margin-left: auto;
-    margin-right: auto;
-    text-align: ;
 }
 
 .generateBtn:hover {
     box-shadow: 0 0 20px var(--neon-green);
 }
 
-.imgDice {
+.diceIcon {
     position: absolute;
     transform: translate(-50%, -50%);
     left: 50%;
     top: 50%;
 }
 
-.line {
-    height: 10px;
-    width: 100%;
+.errorMsg {
+    color: white;
 }
 
 @media (min-width: 769px) {
-    .adviceComponent {
+    .adviceBox {
         width: 520px;
     }
 }
