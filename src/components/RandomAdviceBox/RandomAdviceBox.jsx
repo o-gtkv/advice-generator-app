@@ -1,5 +1,4 @@
 import React, { useState, useEffect } from "react"
-import { useMediaQuery } from "../../hooks"
 
 import style from './RandomAdviceBox.module.css'
 
@@ -8,7 +7,6 @@ import imgDividerPatternDesktop from '../../assets/images/pattern-divider-deskto
 import iconDice from '../../assets/images/icon-dice.svg'
 
 function RandomAdviceBox() {
-    const media = useMediaQuery('(max-width: 768px)')
     const [adviceData, setAdviceData] = useState(null)
     const [isAdviceLoaded, setIsAdviceLoaded] = useState(false)
     const [loadingError, setLoadingError] = useState(null)
@@ -49,11 +47,10 @@ function RandomAdviceBox() {
         <div className={style.adviceBox}>
             <h2 className={style.adviceId}>Advice #{adviceData.id}</h2>
             <p className={style.advice}>&ldquo;{adviceData.advice}&rdquo;</p>
-            <img
-                className={style.imgDividerPattern}
-                src={media.matches ? imgDividerPatternMobile : imgDividerPatternDesktop}
-                alt=""
-            />
+            <picture>
+                <source media="(min-width: 768px)" srcset={imgDividerPatternDesktop} />
+                <img src={imgDividerPatternMobile} alt="" />
+            </picture>
             <button className={style.generateBtn} onClick={() => loadData()}>
                 <img className={style.diceIcon} src={iconDice} alt="next advice" />
             </button>
